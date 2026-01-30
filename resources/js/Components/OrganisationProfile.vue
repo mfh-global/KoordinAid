@@ -3,7 +3,19 @@ import { Link } from '@inertiajs/vue3';
 import { MailIcon, PhoneIcon, HomeIcon, CalendarIcon } from '@heroicons/vue/solid';
 import Badge from '@/Components/Badge.vue';
 import UpdateInquiry from '@/Components/UpdateInquiry.vue';
+import { computed } from 'vue'
 
+
+
+const submittedAt = computed(() => {
+    if (!props.needlist) return ''
+        
+    return new Date(props.needlist.created_at).toLocaleDateString('en-EN', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    })
+})
 const props = defineProps({
     needlist: Object,
 });
@@ -86,6 +98,9 @@ const formatTimestamp = (timestamp) => {
                                 {{ formatTimestamp(needlist.delivery_until) }}
                             </p>
                         </div>
+                        <p class="mt-2 text-xs text-gray-500">
+                            Submitted at {{ submittedAt }}
+                        </p>
                     </div>
                 </div>
             </div>

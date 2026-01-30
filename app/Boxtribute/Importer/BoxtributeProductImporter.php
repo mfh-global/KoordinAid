@@ -88,7 +88,7 @@ class BoxtributeProductImporter implements BoxtributeImporter
                 'name' => $product['name'],
                 'category_id' => $category->id,
                 'size_range' => $product['sizeRange']['label'],
-                'description' => $product['comment'],
+                'description' => $product['comment'] ?? "",
                 'is_inquireable' => $is_inquireable,
             ]
         );
