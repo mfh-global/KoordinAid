@@ -23,6 +23,7 @@ const handleClose = () => {
 
 const handleConfirm = () => {
     showModal.value = false;
+    form.status = newState;
     form.put(route('needlist.update', props.needlist), {
         preserveScroll: true,
     });

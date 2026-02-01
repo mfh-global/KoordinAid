@@ -56,7 +56,7 @@ php artisan sail:install
 
 ### Installieren/Aktualisieren der composer dependencies anhand der composer.lock file
 ```
-./vendor/bin/sail artisan composer install
+./vendor/bin/sail composer install  
 ```
 
 ### npm install
