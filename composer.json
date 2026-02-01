@@ -5,9 +5,9 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.3",
+        "php": "^8.5",
         "guzzlehttp/guzzle": "^7.2",
-        "inertiajs/inertia-laravel": "^0.6.11",
+        "inertiajs/inertia-laravel": "^2.0.19",
         "laravel/framework": "^10.0.0",
         "laravel/sanctum": "^3.3",
         "laravel/scout": "^10.6.1",
