@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\NeedlistController;
-use App\Http\Controllers\CargolistController;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -36,10 +35,6 @@ Route::group(['middleware' => Authenticate::NAME, 'prefix' => 'iz'], function ()
 
     Route::put('/needlist/{inquiry}', [NeedlistController::class, 'update'])
         ->name('needlist.update');
-
-    Route::get('/cargolist', [CargolistController::class, 'index']);
-
-    Route::post('/cargolist',[CargolistController::class, 'create']);
 });
 
 Route::get('/inquiry', [InquiryController::class, 'create'])
